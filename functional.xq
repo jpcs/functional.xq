@@ -1,4 +1,4 @@
-xquery version "1.1" encoding "utf-8";
+xquery version "3.0";
 
 (:
  : Copyright (c) 2010-2011 John Snelson

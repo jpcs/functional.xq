@@ -1,3 +1,5 @@
+xquery version "3.0";
+
 (:
  : Copyright (c) 2010-2011 John Snelson
  :
