@@ -212,7 +212,7 @@ declare function compose($functions as function(*)+) as function(*)
   else compose-helper($tail, $head)
 };
 
-declare private function compose-helper($functions as function(*)+, $result as function(*)) as function(*)
+declare %private function compose-helper($functions as function(*)+, $result as function(*)) as function(*)
 {
   let $head := fn:head($functions)
   let $tail := fn:tail($functions)
