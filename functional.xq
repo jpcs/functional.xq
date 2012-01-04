@@ -158,47 +158,47 @@ declare function Y1($f as function(*)) as function(*)
 
 declare function Y2($f as function(*)) as function(*)
 {
-  $f(Y2($f), ?)
+  function($a) { $f(Y2($f),$a) }
 };
 
 declare function Y3($f as function(*)) as function(*)
 {
-  $f(Y3($f), ?, ?)
+  function($a,$b) { $f(Y3($f),$a,$b) }
 };
 
 declare function Y4($f as function(*)) as function(*)
 {
-  $f(Y4($f), ?, ?, ?)
+  function($a,$b,$c) { $f(Y4($f),$a,$b,$c) }
 };
 
 declare function Y5($f as function(*)) as function(*)
 {
-  $f(Y5($f), ?, ?, ?, ?)
+  function($a,$b,$c,$d) { $f(Y5($f),$a,$b,$c,$d) }
 };
 
 declare function Y6($f as function(*)) as function(*)
 {
-  $f(Y6($f), ?, ?, ?, ?, ?)
+  function($a,$b,$c,$d,$e) { $f(Y6($f),$a,$b,$c,$d,$e) }
 };
 
 declare function Y7($f as function(*)) as function(*)
 {
-  $f(Y7($f), ?, ?, ?, ?, ?, ?)
+  function($a,$b,$c,$d,$e,$g) { $f(Y7($f),$a,$b,$c,$d,$e,$g) }
 };
 
 declare function Y8($f as function(*)) as function(*)
 {
-  $f(Y8($f), ?, ?, ?, ?, ?, ?, ?)
+  function($a,$b,$c,$d,$e,$g,$h) { $f(Y8($f),$a,$b,$c,$d,$e,$g,$h) }
 };
 
 declare function Y9($f as function(*)) as function(*)
 {
-  $f(Y9($f), ?, ?, ?, ?, ?, ?, ?, ?)
+  function($a,$b,$c,$d,$e,$g,$h,$i) { $f(Y9($f),$a,$b,$c,$d,$e,$g,$h,$i) }
 };
 
 declare function Y10($f as function(*)) as function(*)
 {
-  $f(Y10($f), ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  function($a,$b,$c,$d,$e,$g,$h,$i,$j) { $f(Y10($f),$a,$b,$c,$d,$e,$g,$h,$i,$j) }
 };
 
 (: Compose a sequence of functions into a single function :)
