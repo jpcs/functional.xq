@@ -199,7 +199,7 @@ Version:  0.9
  compose($functions as function(*)+
 ) as  function(*)
 ```
-  Compose a sequence of functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments.   
+  Compose a sequence of functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments. ie:   
 
 ```xquery
   compose((fn:count#1, fn:filter#2))  
@@ -223,7 +223,7 @@ Version:  0.9
  compose($f1 as function(*), $f2 as function(*)
 ) as  function(*)
 ```
-  Compose two functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments.   
+  Compose two functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments. ie:   
 
 ```xquery
   compose(fn:count#1, fn:filter#2)  

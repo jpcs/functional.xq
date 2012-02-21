@@ -257,7 +257,7 @@ declare %private function Y10($f as function(*)) as function(*)
 (:~
  : Compose a sequence of functions into a single function. All the functions 
  : except the last one must have an arity of 1. The last function may accept
- : between 0 and 10 arguments.
+ : between 0 and 10 arguments. ie:
  :
  : <code>
  : compose((fn:count#1, fn:filter#2))
@@ -289,7 +289,7 @@ declare %private function compose-helper($functions as function(*)+, $result as 
 (:~
  : Compose two functions into a single function. All the functions 
  : except the last one must have an arity of 1. The last function may accept
- : between 0 and 10 arguments.
+ : between 0 and 10 arguments. ie:
  :
  : <code>
  : compose(fn:count#1, fn:filter#2)
