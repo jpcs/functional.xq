@@ -175,7 +175,8 @@ Version:  0.9
  Y($f as function(*)
 ) as  function(*)
 ```
-  Y combinator for a function (up to arity 10). Partially applies a function as  the first argument to itself, so that it can call itself recursively using the  value. Returns the partially applied function. ie:   ```xquery
+  Y combinator for a function (up to arity 10). Partially applies a function as  the first argument to itself, so that it can call itself recursively using the  value. Returns the partially applied function. ie:   
+```xquery
   Y(function($f,$a) { if($a gt 0) then ($a, $f($a - 1)) else $a })(10)  
 ```
    
@@ -197,7 +198,8 @@ Version:  0.9
  compose($functions as function(*)+
 ) as  function(*)
 ```
-  Compose a sequence of functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments.   ```xquery
+  Compose a sequence of functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments.   
+```xquery
   compose((fn:count#1, fn:filter#2))  
 ```
    
@@ -219,7 +221,8 @@ Version:  0.9
  compose($f1 as function(*), $f2 as function(*)
 ) as  function(*)
 ```
-  Compose two functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments.   ```xquery
+  Compose two functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments.   
+```xquery
   compose(fn:count#1, fn:filter#2)  
 ```
    
