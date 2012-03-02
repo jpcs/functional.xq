@@ -11,14 +11,14 @@ Version:  0.9
 
 ## Table of Contents
 
-* Functions: [ id\#1](#func_ id_1), [ incr\#1](#func_ incr_1), [ flip\#1](#func_ flip_1), [ iterate\#2](#func_ iterate_2), [ repeat\#1](#func_ repeat_1), [ take\#2](#func_ take_2), [ until\#3](#func_ until_3), [ ref\#1](#func_ ref_1), [ deref\#1](#func_ deref_1), [ curry\#1](#func_ curry_1), [ Y\#1](#func_ Y_1), [ compose\#1](#func_ compose_1), [ compose\#2](#func_ compose_2), [ compose\#3](#func_ compose_3), [ compose\#4](#func_ compose_4), [ compose\#5](#func_ compose_5), [ compose\#6](#func_ compose_6), [ compose\#7](#func_ compose_7), [ compose\#8](#func_ compose_8), [ compose\#9](#func_ compose_9), [ compose\#10](#func_ compose_10)
+* Functions: [id\#1](#func_id_1), [incr\#1](#func_incr_1), [flip\#1](#func_flip_1), [iterate\#2](#func_iterate_2), [repeat\#1](#func_repeat_1), [take\#2](#func_take_2), [until\#3](#func_until_3), [ref\#1](#func_ref_1), [deref\#1](#func_deref_1), [curry\#1](#func_curry_1), [Y\#1](#func_Y_1), [compose\#1](#func_compose_1), [compose\#2](#func_compose_2), [compose\#3](#func_compose_3), [compose\#4](#func_compose_4), [compose\#5](#func_compose_5), [compose\#6](#func_compose_6), [compose\#7](#func_compose_7), [compose\#8](#func_compose_8), [compose\#9](#func_compose_9), [compose\#10](#func_compose_10)
 
 
 ## Functions
 
-### <a name="func_ id_1"/>  id\#1
+### <a name="func_id_1"/> id\#1
 ```xquery
- id($a
+id($a
 )
 ```
  Returns the argument 
@@ -29,9 +29,9 @@ Version:  0.9
 * $a
 
 
-### <a name="func_ incr_1"/>  incr\#1
+### <a name="func_incr_1"/> incr\#1
 ```xquery
- incr($a
+incr($a
 )
 ```
  Adds one to the argument 
@@ -42,9 +42,9 @@ Version:  0.9
 * $a
 
 
-### <a name="func_ flip_1"/>  flip\#1
+### <a name="func_flip_1"/> flip\#1
 ```xquery
- flip(
+flip(
   $f as function(item()*,item()*) as item()*
 ) as  function(item()*,item()*) as item()*
 ```
@@ -59,9 +59,9 @@ Version:  0.9
 #### Returns
 *  function(item()\*,item()\*) as item()\*
 
-### <a name="func_ iterate_2"/>  iterate\#2
+### <a name="func_iterate_2"/> iterate\#2
 ```xquery
- iterate($f, $a
+iterate($f, $a
 )
 ```
   Returns an infinite sequence of ($a, $f($a), $f($f($a)), ...).  Only really useful on an implementation that supports lazy evaluation 
@@ -74,9 +74,9 @@ Version:  0.9
 * $a
 
 
-### <a name="func_ repeat_1"/>  repeat\#1
+### <a name="func_repeat_1"/> repeat\#1
 ```xquery
- repeat($a
+repeat($a
 )
 ```
   Returns an infinite sequence of the argument sequence repeated.  Only really useful on an implementation that supports lazy evaluation 
@@ -87,9 +87,9 @@ Version:  0.9
 * $a
 
 
-### <a name="func_ take_2"/>  take\#2
+### <a name="func_take_2"/> take\#2
 ```xquery
- take($n, $l
+take($n, $l
 )
 ```
   Returns the first $n items from the sequence $l  
@@ -102,9 +102,9 @@ Version:  0.9
 * $l: the sequence to return items from
 
 
-### <a name="func_ until_3"/>  until\#3
+### <a name="func_until_3"/> until\#3
 ```xquery
- until($p, $f, $a
+until($p, $f, $a
 )
 ```
   Tests the predicate $p($a), returning $a if true, or until($p, $f, $f($a)) otherwise.  
@@ -119,9 +119,9 @@ Version:  0.9
 * $a: the initial starting value
 
 
-### <a name="func_ ref_1"/>  ref\#1
+### <a name="func_ref_1"/> ref\#1
 ```xquery
- ref($arg as item()*
+ref($arg as item()*
 ) as  function() as item()*
 ```
  Wrap a sequence as a function item  
@@ -135,9 +135,9 @@ Version:  0.9
 #### Returns
 *  function() as item()\*
 
-### <a name="func_ deref_1"/>  deref\#1
+### <a name="func_deref_1"/> deref\#1
 ```xquery
- deref($arg as function() as item()*
+deref($arg as function() as item()*
 ) as  item()*
 ```
  Unwrap a sequence from a function item 
@@ -151,9 +151,9 @@ Version:  0.9
 #### Returns
 *  item()\*
 
-### <a name="func_ curry_1"/>  curry\#1
+### <a name="func_curry_1"/> curry\#1
 ```xquery
- curry($f as function(*)
+curry($f as function(*)
 ) as  function(item()*) as item()*
 ```
   Curries a function (up to arity 10). Takes a function that accepts  a number of arguments, and returns a function that accepts the first argument,  then returns a new function to accept the second, and so on.  
@@ -170,9 +170,9 @@ Version:  0.9
 #### Errors
  If $f has an arity greater than 10 or less than 1. 
 
-### <a name="func_ Y_1"/>  Y\#1
+### <a name="func_Y_1"/> Y\#1
 ```xquery
- Y($f as function(*)
+Y($f as function(*)
 ) as  function(*)
 ```
   Y combinator for a function (up to arity 10). Partially applies a function as  the first argument to itself, so that it can call itself recursively using the  value. Returns the partially applied function. ie:   
@@ -194,9 +194,9 @@ Version:  0.9
 #### Errors
  If $f has an arity greater than 10 or less than 1. 
 
-### <a name="func_ compose_1"/>  compose\#1
+### <a name="func_compose_1"/> compose\#1
 ```xquery
- compose($functions as function(*)+
+compose($functions as function(*)+
 ) as  function(*)
 ```
   Compose a sequence of functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments. ie:   
@@ -218,9 +218,9 @@ Version:  0.9
 #### Errors
  If the last function has an arity greater than 10. 
 
-### <a name="func_ compose_2"/>  compose\#2
+### <a name="func_compose_2"/> compose\#2
 ```xquery
- compose($f1 as function(*), $f2 as function(*)
+compose($f1 as function(*), $f2 as function(*)
 ) as  function(*)
 ```
   Compose two functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments. ie:   
@@ -244,9 +244,9 @@ Version:  0.9
 #### Errors
  If the last function has an arity greater than 10. 
 
-### <a name="func_ compose_3"/>  compose\#3
+### <a name="func_compose_3"/> compose\#3
 ```xquery
- compose($f1 as function(*), $f2 as function(*), $f3 as function(*)
+compose($f1 as function(*), $f2 as function(*), $f3 as function(*)
 ) as  function(*)
 ```
   Compose three functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments.   
@@ -267,9 +267,9 @@ Version:  0.9
 #### Errors
  If the last function has an arity greater than 10. 
 
-### <a name="func_ compose_4"/>  compose\#4
+### <a name="func_compose_4"/> compose\#4
 ```xquery
- compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*)
+compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*)
 ) as  function(*)
 ```
   Compose four functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments.   
@@ -292,9 +292,9 @@ Version:  0.9
 #### Errors
  If the last function has an arity greater than 10. 
 
-### <a name="func_ compose_5"/>  compose\#5
+### <a name="func_compose_5"/> compose\#5
 ```xquery
- compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*)
+compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*)
 ) as  function(*)
 ```
   Compose five functions into a single function. All the functions   except the last one must have an arity of 1. The last function may accept  between 0 and 10 arguments.   
@@ -319,9 +319,9 @@ Version:  0.9
 #### Errors
  If the last function has an arity greater than 10. 
 
-### <a name="func_ compose_6"/>  compose\#6
+### <a name="func_compose_6"/> compose\#6
 ```xquery
- compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*),
+compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*),
   $f6 as function(*)
 ) as  function(*)
 ```
@@ -349,9 +349,9 @@ Version:  0.9
 #### Errors
  If the last function has an arity greater than 10. 
 
-### <a name="func_ compose_7"/>  compose\#7
+### <a name="func_compose_7"/> compose\#7
 ```xquery
- compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*),
+compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*),
   $f6 as function(*), $f7 as function(*)
 ) as  function(*)
 ```
@@ -381,9 +381,9 @@ Version:  0.9
 #### Errors
  If the last function has an arity greater than 10. 
 
-### <a name="func_ compose_8"/>  compose\#8
+### <a name="func_compose_8"/> compose\#8
 ```xquery
- compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*),
+compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*),
   $f6 as function(*), $f7 as function(*), $f8 as function(*)
 ) as  function(*)
 ```
@@ -415,9 +415,9 @@ Version:  0.9
 #### Errors
  If the last function has an arity greater than 10. 
 
-### <a name="func_ compose_9"/>  compose\#9
+### <a name="func_compose_9"/> compose\#9
 ```xquery
- compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*),
+compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*),
   $f6 as function(*), $f7 as function(*), $f8 as function(*), $f9 as function(*)
 ) as  function(*)
 ```
@@ -451,9 +451,9 @@ Version:  0.9
 #### Errors
  If the last function has an arity greater than 10. 
 
-### <a name="func_ compose_10"/>  compose\#10
+### <a name="func_compose_10"/> compose\#10
 ```xquery
- compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*),
+compose($f1 as function(*), $f2 as function(*), $f3 as function(*), $f4 as function(*), $f5 as function(*),
   $f6 as function(*), $f7 as function(*), $f8 as function(*), $f9 as function(*), $f10 as function(*)
 ) as  function(*)
 ```
